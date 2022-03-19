@@ -1,24 +1,30 @@
-import logo from './logo.svg';
+// import logo from './logo.svg';
 import './App.css';
+import Accordion from "./components/widgets/Accordion/Accordion";
+import AccordionHeader from "./components/widgets/Accordion/AccordionHeader";
+import AccordionItem from "./components/widgets/Accordion/AccordionItem";
+import AccordionBody from "./components/widgets/Accordion/AccordionBody";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Accordion id={"accordionExample"}>
+      <AccordionItem>
+          <AccordionHeader id={"heading1"} targetId={"collapse1"}>
+              Heading 1
+          </AccordionHeader>
+          <AccordionBody id={"collapse1"} targetId={"accordionExample"} targetLabel={"heading1"}>
+              Accordion 1
+          </AccordionBody>
+      </AccordionItem>
+        <AccordionItem>
+            <AccordionHeader id={"heading2"} targetId={"collapse2"} collapsed>
+                Heading 2
+            </AccordionHeader>
+            <AccordionBody id={"collapse2"} targetId={"accordionExample"} targetLabel={"heading2"}>
+                Accordion 2
+            </AccordionBody>
+        </AccordionItem>
+    </Accordion>
   );
 }
 
