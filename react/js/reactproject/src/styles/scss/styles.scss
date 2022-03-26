@@ -1,0 +1,33 @@
+.logo {
+  width: 60px;
+  height: 40px;
+}
+
+.header {
+  background-color: #1A94FF;
+}
+
+#nav-dropdown {
+  color: white;
+}
+
+#search-btn {
+  background-color: rgb(13, 92, 182);
+}
+
+.car-category-content {
+  text-decoration: none;
+  color: #000000;
+
+  .car-category-image {
+    width: 160px;
+    height: 120px;
+    margin-top: 10px;
+  }
+
+  .car-category-name {
+    margin: -20px 0 0 -80px;
+    text-align: center;
+  }
+
+}
